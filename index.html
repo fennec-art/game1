@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>스네이크 게임</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Snake</h1>
+
+<div class="hud">
+  <span>점수 <b id="score">0</b></span>
+  <span>최고 <b id="best">0</b></span>
+</div>
+
+<div class="stage">
+  <canvas id="game"></canvas>
+  <div class="overlay" id="overlay">
+    <h2 id="overlayTitle">스네이크 게임</h2>
+    <p id="overlayText">
+      방향키 또는 <b>WASD</b>로 이동<br>
+      먹이를 먹어 점수를 올리세요<br>
+      금색 아이템을 먹으면 <b>5초간 2배속</b><br>
+      <b>Space</b> 일시정지
+    </p>
+    <button id="startBtn">시작</button>
+  </div>
+</div>
+
+<div class="pad">
+  <span></span><button data-dir="up">▲</button><span></span>
+  <button data-dir="left">◀</button><span></span><button data-dir="right">▶</button>
+  <span></span><button data-dir="down">▼</button><span></span>
+</div>
+
+<p class="hint">방향키 / WASD 이동 · Space 일시정지 · R 재시작</p>
+
+<audio id="bgm" src="Pixel-Jungle-Run.wav" loop preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
